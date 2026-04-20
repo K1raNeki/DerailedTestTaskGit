@@ -44,6 +44,7 @@ public class ComputerQuest : MonoBehaviour
             PlayerController.Instance.State = PlayerState.Default;
         }
         StartCoroutine(FadeCanvas(start, 0.2f));
+        MangerGame.CourceCompledet = true;
     }
 
     private void NextStep()

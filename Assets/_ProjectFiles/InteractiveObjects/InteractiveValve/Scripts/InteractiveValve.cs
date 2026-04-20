@@ -36,8 +36,8 @@ public class InteractiveValve : MonoBehaviour, IInteractable
 
     public string GetInteractText()
     {
-        if (!_isInteracting) return "Зажми [E] для вращения";
-
+        if (!_isInteracting && MangerGame.CourceCompledet) return "Зажми [E] для вращения";
+        else if(!MangerGame.CourceCompledet) return "Смена еще не окончена";
         return "";
     }
 
@@ -47,7 +47,7 @@ public class InteractiveValve : MonoBehaviour, IInteractable
 
     public void HoldInteract()
     {
-        _isInteracting = true;
+        if (MangerGame.CourceCompledet) _isInteracting = true;
     }
 
     private void ApplyDoorPosition()

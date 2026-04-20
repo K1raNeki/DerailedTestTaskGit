@@ -90,6 +90,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Finish") && MangerGame.CourceCompledet) MangerGame.Instance.Ending(true);
+    }
 
     private void OnEnable() => _actions.Player.Enable();
     private void OnDisable() => _actions.Player.Disable();
