@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GGMovenetSettings
   MoveSpeed: 7
   Sensitivity: 1
+  Gravity: -10

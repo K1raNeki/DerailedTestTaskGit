@@ -8,4 +8,7 @@ public class PlayerMovementSettings : ScriptableObject
 
     [Header("Look")]
     public float Sensitivity = 0.1f;
+
+    [Header("Gravity")]
+    public float Gravity = -10f;
 }

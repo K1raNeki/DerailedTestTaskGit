@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98e9df2bea9c7469e98a06d74123db51, type: 3}
+  m_Name: InteractiveObjectsSettings
+  m_EditorClassIdentifier: Assembly-CSharp::InteractiveObjectsSettings
+  ValveMaxRorateAngle: 100
+  ValveSpeedRorate: 30
+  MaxDoorHight: 6

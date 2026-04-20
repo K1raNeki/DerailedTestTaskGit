@@ -3,10 +3,10 @@ using UnityEngine;
 public class BaseItem : MonoBehaviour, IInteractable
 {
     [Header("Links")]
-    [SerializeField] private ItemData _data;
-    [SerializeField] private Rigidbody _rb;
+    public ItemData Data;
 
-    public Soket MySoket;
+    private Rigidbody _rb;
+    [HideInInspector] public Soket MySoket;
 
 
     void Awake()
@@ -15,7 +15,7 @@ public class BaseItem : MonoBehaviour, IInteractable
         ItemPhysDisable(false);
     }
 
-    public string GetInteractText() => $"[E] Взять {_data.Name}";
+    public string GetInteractText() => $"[E] Взять {Data.Name}";
 
     public void Interact()
     {
@@ -30,7 +30,7 @@ public class BaseItem : MonoBehaviour, IInteractable
     public void MoveItemToSlot(bool enablePhys)
     {
         ItemPhysDisable(enablePhys);
-                transform.SetParent(PlayerController.Instance.PlayerSlot.transform);
+        transform.SetParent(PlayerController.Instance.PlayerSlot.transform);
 
         transform.position = PlayerController.Instance.PlayerSlot.transform.position;
         transform.localRotation = Quaternion.identity;
@@ -39,7 +39,7 @@ public class BaseItem : MonoBehaviour, IInteractable
     }
 
 
-    private void ItemPhysDisable(bool enable)
+    public void ItemPhysDisable(bool enable)
     {
         if (_rb) _rb.isKinematic = !enable;
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Soket : MonoBehaviour, IInteractable
 {
     [Header("Links")]
-    public BaseItem CurretItem;
+    [HideInInspector] public BaseItem CurretItem;
     [SerializeField] private Transform _attachPoint;
 
 
@@ -12,9 +12,9 @@ public class Soket : MonoBehaviour, IInteractable
         if (PlayerController.Instance.HaveItem)
         {
             if (CurretItem == null) return "[E] Положить предмет";
-            if (CurretItem != null) return "гнездо занято";
+            if (CurretItem != null) return "Гнездо занято";
         }
-        return "";
+        return "У вас нечего класть";
     }
 
     public void Interact()
@@ -29,7 +29,7 @@ public class Soket : MonoBehaviour, IInteractable
             CurretItem.transform.localScale = Vector3.one;
 
             CurretItem.MySoket = this;
-            
+
             PlayerController.Instance.HaveItem = false;
             PlayerController.Instance.CurretItem = null;
         }
