@@ -21188,15 +21188,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 776253614775570136, guid: 68a5e8ba6176046fa953ef33a0ca4ddb, type: 3}
-      propertyPath: m_DataSource
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 776253614775570136, guid: 68a5e8ba6176046fa953ef33a0ca4ddb, type: 3}
       propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 776253614775570136, guid: 68a5e8ba6176046fa953ef33a0ca4ddb, type: 3}
-      propertyPath: m_WaitForFirstFrame
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1313451102085582544, guid: 68a5e8ba6176046fa953ef33a0ca4ddb, type: 3}

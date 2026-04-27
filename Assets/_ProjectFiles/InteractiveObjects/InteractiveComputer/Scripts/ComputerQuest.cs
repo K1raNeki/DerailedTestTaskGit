@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using System.IO;
 
 public class ComputerQuest : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ComputerQuest : MonoBehaviour
 
     private int _stepInt;
     private bool _questStart;
+    string path = Path.Combine(Application.streamingAssetsPath, "sakutinVideo.mp4");
 
     // in a config InteractionController
     private Color _selectColor = Color.green;
@@ -40,6 +42,8 @@ public class ComputerQuest : MonoBehaviour
         if (start) PlayerController.Instance.State = PlayerState.Stan;
         else
         {
+            _videoPlayer.source = VideoSource.Url;
+            _videoPlayer.url = path; 
             _videoPlayer.Play();
             PlayerController.Instance.State = PlayerState.Default;
         }

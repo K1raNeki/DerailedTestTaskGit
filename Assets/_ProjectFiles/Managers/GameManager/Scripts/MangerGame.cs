@@ -34,7 +34,7 @@ public class MangerGame : MonoBehaviour
 
     private void SpawnItem()
     {
-        for(int i = 0; i < _item.Length; i++)
+        for (int i = 0; i < _item.Length; i++)
         {
             _item[i].transform.SetParent(_sokets[i].transform);
             _item[i].transform.position = _sokets[i].AttachPoint.position;
